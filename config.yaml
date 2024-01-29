@@ -11,4 +11,4 @@ MYSQL:
   mariadb_user:
   mariadb_password:
   mariadb_database:
-  mysqldump_extra_args:
+  mysqldump_extra_args: []
