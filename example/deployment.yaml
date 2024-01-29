@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: galera-backup
-  namespace: mariadb
+  namespace: galera
 spec:
   replicas: 1
   selector:

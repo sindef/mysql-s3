@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: galera-backup
-  namespace: mariadb
+  namespace: galera
 data:
   config.yaml: |
     S3:
