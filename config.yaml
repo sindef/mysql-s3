@@ -1,0 +1,14 @@
+S3:
+  aws_access_key_id: 
+  aws_secret_access_key:
+  aws_region:
+  aws_bucket:
+  aws_url:
+  aws_s3_tls_insecure:
+MYSQL:
+  mariadb_host:
+  mariadb_port:
+  mariadb_user:
+  mariadb_password:
+  mariadb_database:
+  mysqldump_extra_args:
