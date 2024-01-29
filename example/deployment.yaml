@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: galera-backup
+  namespace: mariadb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: galera-backup
+  template:
+    metadata:
+      labels:
+        app: galera-backup
+    spec:
+      containers:
+      - name: galera-backup
+        image: registry.someregistry.com/mysql-s3:0.1.1
+        volumeMounts:
+        - name: config
+          mountPath: /etc/mysql-s3
+        # livenessProbe:
+        #   httpGet:
+        #     path: /healthz
+        #     port: 8090
+        #   initialDelaySeconds: 2
+        #   periodSeconds: 30
+          
+      volumes:
+      - name: config
+        configMap:
+          name: galera-backup
+          items:
+          - key: config.yaml
+            path: config.yaml
